@@ -2,44 +2,51 @@ html,body {
 	margin: 0;
 	padding: 0;
 	touch-action: none;
+  font-family: sans-serif;
 }
 #sig-container {
-  position:absolute;
-  top: 50px;
-  left: 10px;
+  position: relative;
   width: calc(100vw - 26px);
-  height: 50vh;
-  border: 3px solid #ccc;
+  height: calc(60vh - 20px);
+  border: 3px solid #cccccc;
+  margin: 10px auto;
   border-radius: 8px;
 }
-
+#sig-container:before {
+  content: "Sign here";
+  position: absolute;
+  top: 0.2rem;
+  left: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.5em;
+  color: #cccccc;
+}
 canvas {
 	position: relative;
 	top: 0;
   margin: 0;
 	left: 0;
 }
-
 #export-button {
-  position: absolute;
+  position: relative;
+  display: block;
   width: calc(100vw - 20px);
-  bottom: 50px;
-  left: 10px;
-  height: 60px;
-  border: none;
-  color: black;
-  font-size: 2em;
-  padding: 5px 10px;
-  border-radius: 5px;
+  height: calc(40vh - 20px);
+  margin: 10px auto;
+  background-color: #cccccc;
+  border: 3px solid #cccccc;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 @media (min-width: 30em) and (orientation: landscape) {
   #sig-container {
-  /*  width: calc(50vw - 26px);
-    margin-left: calc(25vw - 13px); */
+    width: calc(80vw - 26px);
   }
   #export-button {
-    width: calc(50vw - 20px);
-    left: calc(25vw - 13px);
+    width: calc(80vw - 20px);
   }
 }
