@@ -1,0 +1,45 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	touch-action: none;
+}
+#sig-container {
+  position:absolute;
+  top: 50px;
+  left: 10px;
+  width: calc(100vw - 26px);
+  height: 50vh;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+}
+
+canvas {
+	position: relative;
+	top: 0;
+  margin: 0;
+	left: 0;
+}
+
+#export-button {
+  position: absolute;
+  width: calc(100vw - 20px);
+  bottom: 50px;
+  left: 10px;
+  height: 60px;
+  border: none;
+  color: black;
+  font-size: 2em;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+@media (min-width: 30em) and (orientation: landscape) {
+  #sig-container {
+  /*  width: calc(50vw - 26px);
+    margin-left: calc(25vw - 13px); */
+  }
+  #export-button {
+    width: calc(50vw - 20px);
+    left: calc(25vw - 13px);
+  }
+}
